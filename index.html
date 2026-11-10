@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="RAIZ — Gestão e Continuidade Rural. Produção, finanças, patrimônio e planejamento familiar em um só lugar.">
+  <title>RAIZ | Gestão e Continuidade Rural</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" type="image/png" href="assets/logo-raiz.png">
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <section id="landing" class="landing">
+    <nav class="site-nav wrap">
+      <a class="brand brand-light" href="#inicio" aria-label="RAIZ início">
+        <img class="brand-logo" src="assets/logo-raiz.png" alt="Logo RAIZ — Planejamento Sucessório e Gestão Contábil de Propriedades Rurais"><span><b>RAIZ</b><small>GESTÃO E CONTINUIDADE RURAL</small></span>
+      </a>
+      <div class="site-links">
+        <a href="#beneficios">Benefícios</a><a href="#modulos">Módulos</a><a href="#como-funciona">Como funciona</a>
+      </div>
+      <button class="btn btn-primary" id="open-login">Acessar sistema <span>↗</span></button>
+      <button class="mobile-menu" id="mobile-menu" aria-label="Abrir menu">☰</button>
+    </nav>
+
+    <header id="inicio" class="hero wrap">
+      <div class="hero-copy">
+        <span class="eyebrow"><span class="eyebrow-dot"></span> CUIDANDO DO QUE VOCÊ CONSTRUIU</span>
+        <h1>Do campo<br>para o <em>futuro.</em></h1>
+        <p>Um lugar simples para organizar a produção, cuidar das contas e preparar a continuidade da propriedade rural com toda a família.</p>
+        <div class="hero-actions">
+          <button class="btn btn-primary btn-large" id="hero-login">Começar agora <span>→</span></button>
+          <a class="btn btn-outline btn-large" href="#modulos">Conhecer a plataforma</a>
+        </div>
+        <div class="hero-proof"><span class="proof-icon">✓</span><span>Produção, patrimônio e família reunidos em um só lugar.</span></div>
+      </div>
+      <div class="hero-visual">
+        <div class="sun"></div><div class="hero-leaf leaf-one">❧</div><div class="hero-leaf leaf-two">❧</div>
+        <div class="field-art">
+          <div class="field-sun"></div><div class="field-hill hill-back"></div><div class="field-hill hill-front"></div>
+          <div class="crop-row row-one"></div><div class="crop-row row-two"></div><div class="crop-row row-three"></div>
+          <div class="farm-house"><span></span><i></i></div>
+        </div>
+        <div class="floating-note note-top"><span class="note-icon">🌱</span><span><b>Planejamento que cresce</b><small>Um passo de cada vez</small></span></div>
+        <div class="floating-note note-bottom"><span class="note-icon">↗</span><span><b>Visão da propriedade</b><small>Mais clareza nas decisões</small></span></div>
+      </div>
+    </header>
+    <div class="hero-strip"><div class="wrap strip-inner"><span>🌿 Produção consciente</span><i></i><span>♧ Família unida</span><i></i><span>♢ Decisões mais seguras</span><i></i><span>✳ Um futuro melhor</span></div></div>
+
+    <section id="beneficios" class="section wrap">
+      <div class="section-heading"><span class="eyebrow">UMA GESTÃO MAIS SIMPLES</span><h2>O cuidado com a terra<br>também é cuidado com o futuro.</h2><p>Tenha mais organização no dia a dia e mais tranquilidade para planejar os próximos passos.</p></div>
+      <div class="benefit-grid">
+        <article class="benefit-card"><span class="feature-icon">⌂</span><h3>Conheça sua propriedade</h3><p>Reúna informações sobre áreas, bens, culturas e atividades em um painel fácil de consultar.</p></article>
+        <article class="benefit-card"><span class="feature-icon">R$</span><h3>Organize as contas</h3><p>Registre entradas e saídas, acompanhe o saldo e entenda melhor os resultados da produção.</p></article>
+        <article class="benefit-card"><span class="feature-icon">♧</span><h3>Prepare a continuidade</h3><p>Organize documentos, tarefas e conversas importantes com a família e profissionais.</p></article>
+      </div>
+    </section>
+
+    <section id="modulos" class="modules-section">
+      <div class="wrap">
+        <div class="section-heading section-heading-left"><span class="eyebrow">TUDO NO MESMO LUGAR</span><h2>Uma plataforma para<br>cada parte da sua rotina.</h2></div>
+        <div class="module-grid">
+          <article class="module-card module-green"><span class="module-number">01</span><div class="module-symbol">🌽</div><h3>Culturas e produção</h3><p>Registre plantio, colheita, custos e produtividade por cultura.</p><button class="text-link" data-login>Explorar módulos →</button></article>
+          <article class="module-card"><span class="module-number">02</span><div class="module-symbol">◷</div><h3>Gestão financeira</h3><p>Controle receitas, despesas, contas pendentes e fluxo de caixa.</p><button class="text-link" data-login>Explorar módulos →</button></article>
+          <article class="module-card"><span class="module-number">03</span><div class="module-symbol">▤</div><h3>Documentos e bens</h3><p>Organize registros, arquivos, patrimônio e prazos importantes.</p><button class="text-link" data-login>Explorar módulos →</button></article>
+          <article class="module-card"><span class="module-number">04</span><div class="module-symbol">♧</div><h3>Planejamento sucessório</h3><p>Acompanhe as etapas de preparação para a próxima geração.</p><button class="text-link" data-login>Explorar módulos →</button></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="como-funciona" class="how-section wrap">
+      <div class="how-art"><img class="how-logo" src="assets/logo-raiz.png" alt="RAIZ — Planejamento Sucessório e Gestão Contábil de Propriedades Rurais"><div class="how-leaf">❧</div></div>
+      <div class="how-copy"><span class="eyebrow">COMECE NO SEU RITMO</span><h2>Organizar hoje.<br><em>Planejar amanhã.</em></h2>
+        <ol class="steps"><li><b>01</b><span><strong>Cadastre sua propriedade</strong><small>Comece com as informações essenciais.</small></span></li><li><b>02</b><span><strong>Registre a rotina</strong><small>Organize produção, contas e documentos.</small></span></li><li><b>03</b><span><strong>Planeje em família</strong><small>Acompanhe tarefas e etapas de continuidade.</small></span></li></ol>
+        <button class="btn btn-primary" id="how-login">Acessar o RAIZ →</button>
+      </div>
+    </section>
+    <section class="quote-band"><div class="wrap quote-content"><span>“</span><p>O futuro da propriedade começa com as decisões que a família organiza hoje.</p><small>RAIZ · Gestão e Continuidade Rural</small></div></section>
+    <section class="faq-section wrap">
+      <div class="section-heading"><span class="eyebrow">DÚVIDAS FREQUENTES</span><h2>Vamos conversar?</h2></div>
+      <div class="faq-list">
+        <details><summary>O RAIZ substitui um contador ou advogado?</summary><p>Não. O RAIZ ajuda a organizar informações e acompanhar tarefas. Decisões contábeis, jurídicas, tributárias e sucessórias devem ser avaliadas por profissionais habilitados.</p></details>
+        <details><summary>Posso acessar pelo celular?</summary><p>Sim. A interface foi planejada para computadores, tablets e celulares.</p></details>
+        <details><summary>Os dados ficam salvos?</summary><p>No modo de demonstração, os registros ficam neste navegador. Para uso compartilhado e seguro, configure o projeto Supabase seguindo o README incluído.</p></details>
+      </div>
+    </section>
+    <section class="contact-section wrap">
+      <div><span class="eyebrow">FALE COM A GENTE</span><h2>Uma boa conversa<br>pode ser o começo.</h2><p>Envie sua mensagem ou sugestão sobre a plataforma.</p></div>
+      <form id="contact-form" class="contact-form"><label>Seu nome<input name="nome" required placeholder="Como podemos chamar você?"></label><label>E-mail<input name="email" type="email" required placeholder="voce@exemplo.com"></label><label>Mensagem<textarea name="mensagem" required placeholder="Conte como podemos ajudar"></textarea></label><button class="btn btn-primary" type="submit">Preparar mensagem →</button><small>O formulário demonstra a experiência local. Para envio real, conecte um serviço de backend.</small></form>
+    </section>
+    <footer class="site-footer"><div class="wrap footer-main"><a class="brand brand-light" href="#inicio"><img class="brand-logo" src="assets/logo-raiz.png" alt="Logo RAIZ — Planejamento Sucessório e Gestão Contábil de Propriedades Rurais"><span><b>RAIZ</b><small>GESTÃO E CONTINUIDADE RURAL</small></span></a><p>Do campo para o futuro.</p><div><a href="#beneficios">Benefícios</a><a href="#modulos">Módulos</a><a href="#como-funciona">Como funciona</a></div></div><div class="wrap footer-bottom">© <span id="year"></span> RAIZ — Gestão e Continuidade Rural. <span>Organização para a família e para o campo.</span></div></footer>
+  </section>
+
+  <section id="app-shell" class="app-shell hidden">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand brand-sidebar" href="#" id="brand-home"><img class="brand-logo" src="assets/logo-raiz.png" alt="Logo RAIZ"><span><b>RAIZ</b><small>GESTÃO RURAL</small></span></a>
+      <div class="family-chip"><span class="avatar">F</span><span><b id="family-name">Minha família</b><small>Área de gestão</small></span></div>
+      <div class="nav-label">VISÃO GERAL</div>
+      <button class="nav-item active" data-page="dashboard"><span>⌂</span> Visão geral</button>
+      <div class="nav-label">GESTÃO DA PROPRIEDADE</div>
+      <button class="nav-item" data-page="culturas"><span>❧</span> Culturas e produção</button>
+      <button class="nav-item" data-page="financeiro"><span>R$</span> Financeiro</button>
+      <button class="nav-item" data-page="propriedades"><span>⌂</span> Propriedades e bens</button>
+      <button class="nav-item" data-page="documentos"><span>▤</span> Documentos</button>
+      <div class="nav-label">FAMÍLIA E CONTINUIDADE</div>
+      <button class="nav-item" data-page="familia"><span>♧</span> Família e sucessores</button>
+      <button class="nav-item" data-page="sucessao"><span>↗</span> Plano sucessório</button>
+      <button class="nav-item" data-page="tarefas"><span>✓</span> Tarefas e reuniões</button>
+      <div class="nav-label">ACOMPANHAMENTO</div>
+      <button class="nav-item" data-page="relatorios"><span>▥</span> Relatórios</button>
+      <button class="nav-item" data-page="configuracoes"><span>⚙</span> Configurações</button>
+      <div class="sidebar-bottom"><div class="mini-leaf">❧</div><p>Pequenos passos hoje.<br><b>Um futuro mais organizado.</b></p><button id="back-home" class="back-home">← Voltar ao site</button></div>
+    </aside>
+    <main class="app-main">
+      <header class="app-topbar"><button class="mobile-menu app-menu" id="app-menu" aria-label="Abrir menu">☰</button><div><span class="top-eyebrow">RAIZ / ÁREA DE GESTÃO</span><h2 id="top-title">Visão geral</h2></div><div class="top-actions"><span class="mode-pill"><i></i> Demonstração local</span><button class="user-button" id="user-button"><span class="avatar">U</span><span><b id="user-name">Usuário</b><small id="user-role">Administrador</small></span>⌄</button></div></header>
+      <div class="app-content" id="app-content"></div>
+      <footer class="app-footer">RAIZ — Gestão e Continuidade Rural <span>Os dados locais ficam neste navegador.</span></footer>
+    </main>
+  </section>
+
+  <dialog id="login-dialog" class="login-dialog">
+    <form id="login-form" method="dialog" class="login-box">
+      <button type="button" class="dialog-close" id="close-login" aria-label="Fechar">×</button>
+      <div class="login-brand"><img class="login-logo" src="assets/logo-raiz.png" alt="Logo RAIZ"><b>RAIZ</b><small>PLANEJAMENTO SUCESSÓRIO RURAL</small></div>
+      <h2>Bem-vindo ao RAIZ</h2><p>Entre para organizar sua gestão rural.</p>
+      <label>Seu nome<input name="nome" required value="Administrador da família" placeholder="Nome completo"></label>
+      <label>Perfil de acesso<select name="papel"><option>Administrador</option><option>Financeiro</option><option>Familiar</option></select></label>
+      <div class="notice">Você está entrando no modo de demonstração. Não é necessário informar senha ou dados reais.</div>
+      <button class="btn btn-primary btn-full" type="submit">Entrar no sistema →</button>
+      <small class="login-foot">Autenticação real requer configuração do Supabase.</small>
+    </form>
+  </dialog>
+  <script src="js/config.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
